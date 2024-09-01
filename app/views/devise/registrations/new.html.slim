@@ -1,0 +1,24 @@
+.login-form
+  .container.align-middle
+    = image_tag 'logo-black.png', size: "32x32", class: "mx-auto d-block"
+    h2.title.py-3
+      | アカウントを作成
+    = form_with model:@user, url: registration_path(resource_name), method: :post, local: true do |f|
+      = render "devise/shared/error_messages", resource: @user
+      .grid.gap-3.row-gap-3
+        .field.g-col-6
+        = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'メールアドレス', class: 'w-100 px-2 py-3 mb-4'
+        br
+        .field.g-col-6.pb-5
+          = f.text_field :tel, size: "50", autofocus: true, autocomplete: "tel", placeholder: '電話番号', class: 'w-100 px-2 py-3'
+        .field.g-col-6.pb-5
+          = f.text_field :password, size: "50", autofocus: true, autocomplete: "password", placeholder: 'パスワード', class: 'w-100 px-2 py-3'
+        .field.g-col-6
+          = f.label '生年月日', class: 'fw-bold'
+          br
+          span.opacity-50
+          | この情報は公開されません。このアカウントをビジネス、ペットなどに使う場合でも、ご自身の年齢を確認してください。
+          br
+          = f.date_select :birthday, {start_year: 1904, endyear: 2024, include_blank: true, use_two_digit_numbers: true}, {class: 'p-2'}
+      .actions.button-area
+        = f.submit "次へ", class: 'btn btn-dark rounded-pill p-3 w-100'

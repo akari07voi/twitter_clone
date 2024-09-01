@@ -1,0 +1,22 @@
+.login-form
+  .container.align-middle
+    = image_tag 'logo-black.png', size: "32x32", class: "mx-auto d-block"
+    h2.title.py-3
+      | Xにログイン
+    - flash.each do |type, message|
+      = content_tag(:div, message, class: "alert alert-#{type == 'notice' ? 'success' : 'danger'}")
+    = form_with model:@user, url: new_user_session_path, method: :post, local: true do |f|
+      = render "devise/shared/error_messages", resource: @user
+      .grid.gap-3.row-gap-3
+        .field.g-col-6
+        = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: '電話番号/メールアドレス/ユーザー名', class: 'w-100 px-2 py-3 mb-4'
+        .field.g-col-6
+        = f.text_field :password, autofocus: true, autocomplete: "password", placeholder: 'パスワード', class: 'w-100 px-2 py-3 mb-4'
+      .actions.button-area
+        = f.submit "次へ", class: 'btn btn-dark rounded-pill p-3 w-100'
+
+      / .actions.button-area
+      /   = f.submit "パスワードを忘れた場合はこちら", class: 'btn btn-dark rounded-pill p-3 w-100'
+      
+      | アカウントをお持ちでない場合は
+      = link_to '登録', new_user_registration_path

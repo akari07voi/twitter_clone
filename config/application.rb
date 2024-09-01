@@ -3,6 +3,7 @@
 require_relative 'boot'
 
 require 'rails/all'
+require 'devise'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -29,5 +30,6 @@ module Myapp
       g.factory_bot false
     end
     config.action_view.default_form_builder = 'ApplicationFormBuilder'
+    config.i18n.default_locale = :ja
   end
 end
