@@ -9,7 +9,7 @@
       = render "devise/shared/error_messages", resource: @user
       .grid.gap-3.row-gap-3
         .field.g-col-6
-        = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: '電話番号/メールアドレス/ユーザー名', class: 'w-100 px-2 py-3 mb-4'
+        = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'メールアドレス', class: 'w-100 px-2 py-3 mb-4'
         .field.g-col-6
         = f.text_field :password, autofocus: true, autocomplete: "password", placeholder: 'パスワード', class: 'w-100 px-2 py-3 mb-4'
       .actions.button-area
