@@ -1,0 +1,14 @@
+.login-form{
+  width: 600px;
+  margin: auto;
+  padding: 40px;
+}
+
+.title{
+  font-weight: bold;
+}
+
+.button-area{
+  text-align: center;
+  padding: 20px;
+}

@@ -1,0 +1,30 @@
+.container.text-left.mt-4
+  .div.pull-left
+  = image_tag 'logo-black.png', size: "32x32", class: "d-block"
+  .div
+    = link_to root_path, class: 'btn btn-light rounded-pill w-25' do 
+      i.bi.bi-house-door-fill.m-2
+      | ホーム
+  .div
+    = link_to 'https://google.com', class: 'btn btn-light rounded-pill w-25' do
+      i.bi.bi-search.m-2
+      | 話題を検索
+  .div
+    = link_to 'https://google.com', class: 'btn btn-light rounded-pill w-25' do 
+      i.bi.bi-bell.m-2
+      | 通知
+  .div
+    = link_to 'https://google.com', class: 'btn btn-light rounded-pill w-25' do 
+      i.bi.bi-envelope.m-2
+      | メッセージ
+  .div
+    = link_to 'https://google.com', class: 'btn btn-light rounded-pill w-25' do 
+      i.bi.bi-people.m-2
+      | プロフィール
+  .div
+    = link_to 'ポストする', 'https://google.com', class: 'btn btn-light rounded-pill w-25'
+  .div
+    = link_to destroy_user_session_path(@user), data: {"turbo-method": :delete }, class: 'btn btn-light rounded-pill w-25' do 
+      | ログアウト
+
+
