@@ -100,8 +100,8 @@ Rails.application.configure do
     address: 'smtp.gmail.com',
     domain: 'gmail.com',
     port: 587,
-    user_name: ENV['GMAIL_USER_NAME'],
-    password: ENV['GMAIL_PASSWORD'],
+    user_name: 'exaount712ak@gmail.com',
+    password: 'jdgx cttv wjri pljh',
     authentication: :login
   }
 end
