@@ -101,7 +101,7 @@ Rails.application.configure do
     domain: 'gmail.com',
     port: 587,
     user_name: 'exaount712ak@gmail.com',
-    password: 'jdgx cttv wjri pljh',
+    password: 'jdgxcttvwjripljh',
     authentication: :login
   }
 end
