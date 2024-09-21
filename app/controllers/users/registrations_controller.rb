@@ -15,7 +15,6 @@ module Users
     def create
       configure_sign_up_params
       User.create(configure_sign_up_params)
-      super
     end
 
     # GET /resource/edit
